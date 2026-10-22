@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dat T. Tran | PhD Student in Mathematics at UNSW Sydney</title>
+    
+    <!-- LOGO TRÊN TAB TRÌNH DUYỆT (FAVICON) -->
+    <link rel="icon" type="image/jpeg" href="avatar.jpg">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -27,33 +31,27 @@
             }
         }
     </script>
-    <!-- Google Fonts -->
+    <!-- Google Fonts (Hydejack Typography) -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto+Slab:wght@600;700;800&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body class="bg-white dark:bg-hyde-darkbg text-slate-800 dark:text-slate-200 font-sans antialiased transition-colors duration-300 relative">
 
-    <!-- WIDGET GÓC PHẢI TRÊN (ĐỒNG HỒ ÚC & VISITOR COUNTER) -->
-    <div class="fixed top-4 right-4 z-50 flex flex-col items-end space-y-2 pointer-events-none">
-        <!-- Đồng hồ (Australia/Sydney) -->
-        <div class="bg-slate-900/80 backdrop-blur-md text-white px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-mono shadow-lg border border-slate-700 flex items-center pointer-events-auto">
-            <i class="far fa-clock mr-2 text-hyde-accent"></i>
-            <span id="sydney-time">Loading...</span>
-        </div>
-        <!-- Lượt truy cập -->
-        <div class="bg-slate-900/80 backdrop-blur-md text-white px-3 py-1.5 rounded-lg text-[11px] sm:text-xs shadow-lg border border-slate-700 flex items-center pointer-events-auto">
-            <i class="fas fa-eye mr-2 text-hyde-accent"></i>
-            <span>Visits: 
-                <!-- Badge đếm lượt truy cập theo username github của bạn -->
-                <img src="https://visitor-badge.laobi.icu/badge?page_id=ttdat1323.github.io" alt="visitor badge" class="inline h-4 ml-1 opacity-90">
-            </span>
-        </div>
-    </div>
+    <!-- MathJax để gõ công thức Toán LaTeX -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-white dark:bg-hyde-darkbg text-slate-800 dark:text-slate-200 font-sans antialiased transition-colors duration-300">
 
     <div class="flex flex-col md:flex-row min-h-screen">
         
-        <!-- LEFT SIDEBAR -->
+        <!-- LEFT SIDEBAR (Hydejack Style) -->
         <aside class="w-full md:w-80 lg:w-96 md:fixed md:inset-y-0 md:left-0 bg-hyde-sidebar text-white flex flex-col justify-between p-8 md:p-10 relative overflow-hidden shadow-2xl z-20"
                style="background-image: linear-gradient(rgba(25, 55, 71, 0.90), rgba(25, 55, 71, 0.96)), url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&auto=format&fit=crop&q=80'); background-size: cover; background-position: center;">
             
@@ -66,12 +64,15 @@
 
             <!-- Profile Info & Navigation -->
             <div class="my-auto py-4 text-center md:text-left">
+                
+                <!-- ẢNH ĐẠI DIỆN CÁ NHÂN -->
                 <a href="#about" class="nav-link inline-block mb-4">
-                    <img src="avatar.JPG" 
+                    <img src="avatar.jpg" 
+                         onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Dat+Tran&size=256&background=4fb1ba&color=fff&bold=true';"
                          alt="Dat T. Tran" 
-                         class="w-28 h-28 rounded-full object-cover border-2 border-hyde-accent shadow-lg mx-auto md:mx-0"
-                         onerror="this.src='https://ui-avatars.com/api/?name=Dat+Tran&background=4fb1ba&color=fff'">
+                         class="w-28 h-28 rounded-full object-cover object-center border-2 border-hyde-accent shadow-lg mx-auto md:mx-0">
                 </a>
+
                 <h1 class="font-slab text-3xl font-bold tracking-tight mb-1">
                     <a href="#about" class="nav-link hover:text-hyde-accent transition">Dat T. Tran</a>
                 </h1>
@@ -82,32 +83,26 @@
                 </p>
 
                 <!-- Vertical Menu -->
-                <nav class="space-y-2.5 font-slab text-sm" id="main-nav">
+                <nav class="space-y-2.5 font-slab text-sm">
                     <a href="#about" class="nav-link block py-1.5 border-b border-hyde-accent text-hyde-accent font-bold transition">
-                        About & Research Interests
+                        About &amp; Research Interests
                     </a>
                     <a href="#publications" class="nav-link block py-1.5 border-b border-white/10 hover:border-hyde-accent hover:text-hyde-accent transition flex items-center justify-between">
-                        <span>Publications & Projects</span>
+                        <span>Publications &amp; Projects</span>
                         <i class="fas fa-book-open text-xs opacity-60"></i>
                     </a>
-                    <!-- MENU MỚI: Academic Activities -->
-                    <a href="#activities" class="nav-link block py-1.5 border-b border-white/10 hover:border-hyde-accent hover:text-hyde-accent transition flex items-center justify-between">
-                        <span>Academic Activities</span>
-                        <i class="fas fa-camera-retro text-xs opacity-60"></i>
-                    </a>
-                    <!-- MENU MỚI: My Blog -->
                     <a href="#blog" class="nav-link block py-1.5 border-b border-white/10 hover:border-hyde-accent hover:text-hyde-accent transition flex items-center justify-between">
                         <span>My Blog</span>
                         <i class="fas fa-pen-nib text-xs opacity-60"></i>
                     </a>
                     <a href="#education" class="nav-link block py-1.5 border-b border-white/10 hover:border-hyde-accent hover:text-hyde-accent transition">
-                        Education & Employment
+                        Education &amp; Employment
                     </a>
                     <a href="#seminars" class="nav-link block py-1.5 border-b border-white/10 hover:border-hyde-accent hover:text-hyde-accent transition">
-                        Seminars & Awards
+                        Seminars &amp; Awards
                     </a>
                     <a href="#skills" class="nav-link block py-1.5 border-b border-white/10 hover:border-hyde-accent hover:text-hyde-accent transition">
-                        Skills & References
+                        Skills &amp; References
                     </a>
                 </nav>
             </div>
@@ -116,25 +111,26 @@
             <div class="pt-4 border-t border-white/10 text-center md:text-left">
                 <div class="flex justify-center md:justify-start space-x-5 text-lg text-slate-300 mb-3">
                     <a href="mailto:ttdat1323@gmail.com" class="hover:text-hyde-accent transition" title="Email"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.researchgate.net/profile/Dat-Tran-T?ev=hdr_xprf" target="_blank" class="hover:text-hyde-accent transition"><i class="fab fa-researchgate"></i></a>
-                    <a href="https://scholar.google.com/" target="_blank" class="hover:text-hyde-accent transition"><i class="fas fa-graduation-cap"></i></a>
-                    <a href="https://github.com/ttdat1323" target="_blank" class="hover:text-hyde-accent transition"><i class="fab fa-github"></i></a>
+                    <a href="https://www.researchgate.net/" target="_blank" class="hover:text-hyde-accent transition" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+                    <a href="https://scholar.google.com/" target="_blank" class="hover:text-hyde-accent transition" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://github.com/ttdat1323" target="_blank" class="hover:text-hyde-accent transition" title="GitHub"><i class="fab fa-github"></i></a>
                 </div>
                 <p class="text-xs text-slate-400">
-                    © 2026 Dat T. Tran.<br>Powered by GitHub Pages.
+                    © 2026 Dat T. Tran.<br>Powered by GitHub Pages &amp; Hydejack.
                 </p>
             </div>
         </aside>
 
         <!-- RIGHT MAIN CONTENT -->
-        <main class="flex-1 md:ml-80 lg:ml-96 px-6 py-12 md:px-16 md:py-20 max-w-5xl">
+        <main class="flex-1 md:ml-80 lg:ml-96 px-6 py-12 md:px-16 md:py-16 max-w-5xl">
             
             <!-- ========================================== -->
-            <!-- TRANG 1: ABOUT & MAIN INFO                 -->
+            <!-- TRANG 1: CÁC MỤC CHUNG (MAIN VIEW)         -->
             <!-- ========================================== -->
             <div id="main-view">
+                
                 <!-- 1. ABOUT SECTION -->
-                <section id="about" class="mb-20 pt-4">
+                <section id="about" class="mb-20">
                     <p class="text-xs uppercase tracking-widest text-hyde-accent font-bold mb-2">About Me</p>
                     <h2 class="font-slab text-3xl md:text-4xl font-bold mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
                         Dat T. Tran (Tran Tan Dat)
@@ -156,7 +152,7 @@
                                 <span class="px-3.5 py-1.5 bg-hyde-accent/15 text-hyde-accent rounded-lg font-semibold text-sm">Algebraic Number Theory</span>
                                 <span class="px-3.5 py-1.5 bg-hyde-accent/15 text-hyde-accent rounded-lg font-semibold text-sm">Lattices</span>
                                 <span class="px-3.5 py-1.5 bg-hyde-accent/15 text-hyde-accent rounded-lg font-semibold text-sm">Arithmetic Dynamics</span>
-                                <span class="px-3.5 py-1.5 bg-hyde-accent/15 text-hyde-accent rounded-lg font-semibold text-sm">Cryptography & Coding Theory</span>
+                                <span class="px-3.5 py-1.5 bg-hyde-accent/15 text-hyde-accent rounded-lg font-semibold text-sm">Cryptography &amp; Coding Theory</span>
                             </div>
                         </div>
 
@@ -168,17 +164,17 @@
                             </div>
                             <div class="p-4 bg-slate-50 dark:bg-hyde-darkcard rounded-xl border border-slate-200 dark:border-slate-700">
                                 <i class="fas fa-map-marker-alt text-hyde-accent mr-2"></i>
-                                <strong>Location:</strong> Sydney, Australia / HCM City, Vietnam
+                                <strong>Location:</strong> Sydney, Australia / Ho Chi Minh City, Vietnam
                             </div>
                         </div>
                     </div>
                 </section>
 
-            <!-- 3. EDUCATION & EMPLOYMENT -->
+                <!-- 3. EDUCATION & EMPLOYMENT -->
                 <section id="education" class="mb-20">
                     <p class="text-xs uppercase tracking-widest text-hyde-accent font-bold mb-2">Academic Background</p>
                     <h2 class="font-slab text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-700">
-                        Education & Employment
+                        Education &amp; Employment
                     </h2>
 
                     <div class="grid md:grid-cols-2 gap-10">
@@ -193,7 +189,7 @@
                                     <h4 class="font-bold text-lg mt-1">Ph.D. in Mathematics</h4>
                                     <p class="text-sm font-medium text-slate-700 dark:text-slate-300">UNSW Sydney, Australia</p>
                                     <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                                        Supervisors: Prof. Alina Ostafe & Prof. Igor Shparlinski
+                                        Supervisors: Prof. Alina Ostafe &amp; Prof. Igor Shparlinski
                                     </p>
                                 </div>
 
@@ -248,16 +244,16 @@
 
                 <!-- 4. SEMINARS, WORKSHOPS & AWARDS -->
                 <section id="seminars" class="mb-20">
-                    <p class="text-xs uppercase tracking-widest text-hyde-accent font-bold mb-2">Academic Activities & Honors</p>
+                    <p class="text-xs uppercase tracking-widest text-hyde-accent font-bold mb-2">Academic Activities &amp; Honors</p>
                     <h2 class="font-slab text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-700">
-                        Seminars, Workshops & Awards
+                        Seminars, Workshops &amp; Awards
                     </h2>
 
                     <div class="grid md:grid-cols-2 gap-10">
                         <!-- Seminars & Workshops -->
                         <div>
                             <h3 class="font-slab text-xl font-bold text-hyde-accent mb-4 flex items-center">
-                                <i class="fas fa-chalkboard-teacher mr-3"></i>Seminars & Research Schools
+                                <i class="fas fa-chalkboard-teacher mr-3"></i>Seminars &amp; Research Schools
                             </h3>
                             <ul class="space-y-3.5 text-sm text-slate-700 dark:text-slate-300">
                                 <li class="p-3.5 rounded-lg bg-slate-50 dark:bg-hyde-darkcard border border-slate-200 dark:border-slate-700">
@@ -284,7 +280,7 @@
                         <!-- Awards & Honors -->
                         <div>
                             <h3 class="font-slab text-xl font-bold text-hyde-accent mb-4 flex items-center">
-                                <i class="fas fa-award mr-3"></i>Honors & Awards
+                                <i class="fas fa-award mr-3"></i>Honors &amp; Awards
                             </h3>
                             <ul class="space-y-3.5 text-sm text-slate-700 dark:text-slate-300">
                                 <li class="flex items-start">
@@ -314,17 +310,56 @@
                             </h3>
                             <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                                 <li>• <strong>2015:</strong> Voluntary Spring Campaign, Ho Chi Minh City University of Education.</li>
-                                <li>• <strong>2014:</strong> Collaborator & Teacher for Cancer and Bronchocele Children, <em>Thuy's Dream Organization</em> (Tuoi Tre Newspaper).</li>
+                                <li>• <strong>2014:</strong> Collaborator &amp; Teacher for Cancer and Bronchocele Children, <em>Thuy's Dream Organization</em> (Tuoi Tre Newspaper).</li>
                             </ul>
+                        </div>
+                    </div>
+
+                    <!-- BOOK TRANSLATION PROJECT (2019) - ATIYAH MACDONALD -->
+                    <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700">
+                        <h3 class="font-slab text-xl font-bold text-hyde-accent mb-4 flex items-center">
+                            <i class="fas fa-book-reader mr-3"></i>Book Translation / Dự Án Dịch Thuật
+                        </h3>
+
+                        <div class="p-6 rounded-xl bg-slate-50 dark:bg-hyde-darkcard border border-slate-200 dark:border-slate-700 shadow-sm">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <div class="flex items-center gap-2.5">
+                                    <span class="px-2.5 py-1 bg-hyde-accent text-white text-xs font-bold rounded">2019</span>
+                                    <h4 class="font-slab font-bold text-lg text-slate-900 dark:text-white">
+                                        Introduction to Commutative Algebra (Vietnamese Translation)
+                                    </h4>
+                                </div>
+                                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 italic">
+                                    Authors: M. F. Atiyah &amp; I. G. Macdonald
+                                </span>
+                            </div>
+
+                            <!-- English Description -->
+                            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
+                                <strong class="text-hyde-accent">[EN]</strong> In 2019, I translated the classic textbook <em>Introduction to Commutative Algebra</em> by M. F. Atiyah and I. G. Macdonald into Vietnamese. This is a book I deeply admire, and I hope this translation contributes a useful reference to the mathematical literature for students and learners in Vietnam.
+                            </p>
+
+                            <!-- Vietnamese Description -->
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-5 border-l-2 border-hyde-accent/50 pl-3 italic">
+                                <strong class="text-hyde-accent not-italic">[VI]</strong> Năm 2019, tôi thực hiện bản dịch tiếng Việt cho cuốn sách kinh điển <em>Introduction to Commutative Algebra</em> (Nhập môn Đại số Giao hoán) của hai tác giả M. F. Atiyah và I. G. Macdonald. Đây là cuốn sách tôi vô cùng yêu thích và hy vọng bản dịch này có thể đóng góp một phần nhỏ vào kho tàng tài liệu tham khảo Toán học tại Việt Nam.
+                            </p>
+
+                            <!-- PDF Download Button -->
+                            <div class="flex flex-wrap items-center gap-3">
+                                <a href="Atiyah-Macdonald-VN.pdf" target="_blank" 
+                                   class="inline-flex items-center px-4 py-2 bg-hyde-accent hover:bg-hyde-accent/90 text-white text-xs font-bold rounded-lg shadow transition">
+                                    <i class="fas fa-file-pdf mr-2 text-sm"></i> View / Download PDF (Bản dịch Tiếng Việt)
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 <!-- 5. SKILLS, LANGUAGES & REFERENCES -->
                 <section id="skills" class="mb-12">
-                    <p class="text-xs uppercase tracking-widest text-hyde-accent font-bold mb-2">Technical & Academic</p>
+                    <p class="text-xs uppercase tracking-widest text-hyde-accent font-bold mb-2">Technical &amp; Academic</p>
                     <h2 class="font-slab text-3xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-700">
-                        Skills & References
+                        Skills &amp; References
                     </h2>
 
                     <!-- Technical & Language Skills -->
@@ -340,7 +375,7 @@
                         </div>
 
                         <div class="p-5 bg-slate-50 dark:bg-hyde-darkcard rounded-xl border border-slate-200 dark:border-slate-700">
-                            <h3 class="font-slab font-bold text-base mb-3 text-hyde-accent"><i class="fas fa-code mr-2"></i>Programming & Typesetting</h3>
+                            <h3 class="font-slab font-bold text-base mb-3 text-hyde-accent"><i class="fas fa-code mr-2"></i>Programming &amp; Typesetting</h3>
                             <div class="flex flex-wrap gap-1.5 text-xs font-medium">
                                 <span class="px-2.5 py-1 bg-white dark:bg-slate-800 rounded border border-slate-200 dark:border-slate-600">Python</span>
                                 <span class="px-2.5 py-1 bg-white dark:bg-slate-800 rounded border border-slate-200 dark:border-slate-600">C++</span>
@@ -382,14 +417,14 @@
                         </div>
                     </div>
                 </section>
-                
-                                </div><!-- Kết thúc #main-view -->
+
+            </div> <!-- Kết thúc #main-view -->
 
 
-           <!-- ========================================== -->
-            <!-- TRANG 2: PUBLICATIONS & PROJECTS           -->
             <!-- ========================================== -->
-            <div id="publications-view" class="hidden pt-4">
+            <!-- TRANG 2: PUBLICATIONS & PROJECTS RIÊNG     -->
+            <!-- ========================================== -->
+            <div id="publications-view" class="hidden">
                 <section id="publications" class="mb-20">
                     <div class="flex items-center justify-between mb-2">
                         <p class="text-xs uppercase tracking-widest text-hyde-accent font-bold">Academic Output</p>
@@ -398,329 +433,315 @@
                         </a>
                     </div>
                     <h2 class="font-slab text-3xl md:text-4xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-700">
-                        Publications & Research Projects
+                        Publications &amp; Research Projects
                     </h2>
 
-                    <!-- 1. ACCEPTED / PUBLISHED PAPERS (BẢNG 2 CỘT) -->
-                    <div class="mb-14">
-                        <h3 class="font-slab text-2xl font-bold text-hyde-accent mb-6 flex items-center">
-                            <i class="fas fa-check-circle mr-3"></i>Accepted & Published Papers
-                        </h3>
-                        
-                        <div class="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                            <table class="w-full text-left border-collapse">
-                                <thead>
-                                    <tr class="bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 border-b-2 border-slate-200 dark:border-slate-700">
-                                        <th class="p-4 font-slab font-bold text-base">Paper Title & Journal</th>
-                                        <th class="p-4 font-slab font-bold text-base w-24 text-center border-l border-slate-200 dark:border-slate-700">Year</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="text-slate-700 dark:text-slate-300">
-                                    <!-- 2023 Paper (Mới hơn lên trên) -->
-                                    <tr class="border-b border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-hyde-darkcard transition">
-                                        <td class="p-4">
-                                            <a href="https://cm.episciences.org/12425" target="_blank" class="font-bold text-slate-900 dark:text-white hover:text-hyde-accent text-base block mb-1">
-                                                Well-Rounded ideal lattices of cyclic cubic and quartic fields
-                                                <i class="fas fa-external-link-alt text-xs ml-1 opacity-50"></i>
-                                            </a>
-                                            <p class="text-sm text-slate-600 dark:text-slate-400">
-                                                <em>Communications in Mathematics</em>, Vol. 31 (2023), Issue 2.<br>
-                                                With <strong>Nam H. Le</strong> and <strong>Ha Tran</strong>.
-                                            </p>
-                                        </td>
-                                        <td class="p-4 text-center font-bold text-slate-900 dark:text-white align-middle border-l border-slate-200 dark:border-slate-700 text-lg">
-                                            2023
-                                        </td>
-                                    </tr>
-                                    <!-- 2022 Paper (Cũ hơn xuống dưới) -->
-                                    <tr class="hover:bg-slate-50 dark:hover:bg-hyde-darkcard transition">
-                                        <td class="p-4">
-                                            <a href="https://www.worldscientific.com/doi/abs/10.1142/S021949882250133X" target="_blank" class="font-bold text-slate-900 dark:text-white hover:text-hyde-accent text-base block mb-1">
-Well-Rounded Twists of Ideal Lattices from Imaginary Quadratic Fields
-                                                <i class="fas fa-external-link-alt text-xs ml-1 opacity-50"></i>
-                                            </a>
-                                            <p class="text-sm text-slate-600 dark:text-slate-400">
-                                                <em>Journal of Algebra and Its Applications</em>, Vol. 21, No. 07, 2250133 (2022).<br>
-                                                With <strong>Nam H. Le</strong> and <strong>Ha Tran</strong>.
-                                            </p>
-                                        </td>
-                                        <td class="p-4 text-center font-bold text-slate-900 dark:text-white align-middle border-l border-slate-200 dark:border-slate-700 text-lg">
-                                            2022
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <div class="space-y-10">
+                        <!-- Peer-Reviewed Publications -->
+                        <div>
+                            <h3 class="font-slab text-xl font-bold text-hyde-accent mb-4 flex items-center">
+                                <i class="fas fa-book-open mr-3"></i>Journal Publications
+                            </h3>
+                            <ol class="list-decimal list-inside space-y-4 text-slate-700 dark:text-slate-300">
+                                <li class="p-5 rounded-xl bg-slate-50 dark:bg-hyde-darkcard border border-slate-200 dark:border-slate-700">
+                                    <span class="font-bold text-slate-900 dark:text-white">Well-Rounded ideal lattices of cyclic cubic and quartic fields</span>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                        With <strong>Nam H. Le</strong> and <strong>Ha Tran</strong>.<br>
+                                        <em>Communications in Mathematics</em>, Vol. 31 (2023), Issue 2 (Special issue: Euclidean lattices: theory and applications), October 18, 2023.
+                                    </p>
+                                </li>
+                                <li class="p-5 rounded-xl bg-slate-50 dark:bg-hyde-darkcard border border-slate-200 dark:border-slate-700">
+                                    <span class="font-bold text-slate-900 dark:text-white">Well-rounded ideal lattices of cyclic cubic and quartic fields</span>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                        With <strong>Nam H. Le</strong> and <strong>Ha Tran</strong>.<br>
+                                        <em>Journal of Algebra and Its Applications</em>, Vol. 21, No. 07, 2250133 (2022).
+                                    </p>
+                                </li>
+                            </ol>
                         </div>
-                    </div>
 
-                    <!-- 2. SUBMITTED / UNDER REVIEW PAPERS (DÒNG THỜI GIAN) -->
-                    <div class="mb-14">
-                        <h3 class="font-slab text-2xl font-bold text-hyde-accent mb-6 flex items-center">
-                            <i class="fas fa-file-signature mr-3"></i>Submitted / Under Review
-                        </h3>
-                        
-                        <ul class="space-y-4 text-slate-700 dark:text-slate-300">
-                            <!-- 2026 Paper (Arxiv 2610.00893) -->
-                            <li class="p-5 rounded-xl bg-slate-50 dark:bg-hyde-darkcard border border-slate-200 dark:border-slate-700 hover:border-hyde-accent transition relative group">
-                                <div class="flex flex-wrap justify-between items-start mb-2">
-                                    <span class="inline-block px-2.5 py-1 bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400 text-[10px] uppercase tracking-wider font-bold rounded">Under Review</span>
-                                    <span class="font-bold text-slate-900 dark:text-white">2026</span>
+                        <!-- Preprints / In Preparation -->
+                        <div>
+                            <h3 class="font-slab text-xl font-bold text-hyde-accent mb-4 flex items-center">
+                                <i class="fas fa-file-alt mr-3"></i>Preprints &amp; In Preparation
+                            </h3>
+                            <ul class="space-y-4 text-slate-700 dark:text-slate-300">
+                                <li class="p-5 rounded-xl bg-slate-50 dark:bg-hyde-darkcard border border-slate-200 dark:border-slate-700">
+                                    <span class="font-bold text-slate-900 dark:text-white">Well-Rounded Twists of the Ring of Integers in Cyclic Cubic Fields</span>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                                        With <strong>Nam H. Le</strong>, <strong>David Karpuk</strong>, and <strong>Ha T. N. Tran</strong> (Preprint, 2025).
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Research Projects -->
+                        <div>
+                            <h3 class="font-slab text-xl font-bold text-hyde-accent mb-4 flex items-center">
+                                <i class="fas fa-project-diagram mr-3"></i>Research Projects
+                            </h3>
+                            <div class="border-l-2 border-hyde-accent pl-5 space-y-5">
+                                <div>
+                                    <div class="flex justify-between items-baseline flex-wrap">
+                                        <h4 class="font-bold text-base">Well-rounded twists of cyclic cubic fields</h4>
+                                        <span class="text-xs font-semibold px-2.5 py-1 bg-slate-100 dark:bg-hyde-darkcard rounded text-slate-500">2023 – Present</span>
+                                    </div>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Collaborators: Nam H. Le, Dr. Dave Karpuk, and Dr. Ha Tran.</p>
                                 </div>
-                                <a href="https://arxiv.org/abs/2610.00893" target="_blank" class="font-bold text-slate-900 dark:text-white group-hover:text-hyde-accent text-base block mb-1">
-                                    Powers in orbits and semigroups generated by polynomials
-                                    <i class="fas fa-external-link-alt text-xs ml-1 opacity-50"></i>
-                                </a>
-                                <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                    With <strong>Alina Ostafe</strong>.<br>
-                                    <em>Submitted </em>. Preprint available at arXiv:2610.00893.
-                                </p>
-                            </li>
-
-                            <!-- 2025 Paper (Arxiv 2508.17123) -->
-                            <li class="p-5 rounded-xl bg-slate-50 dark:bg-hyde-darkcard border border-slate-200 dark:border-slate-700 hover:border-hyde-accent transition relative group">
-                                <div class="flex flex-wrap justify-between items-start mb-2">
-                                    <span class="inline-block px-2.5 py-1 bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400 text-[10px] uppercase tracking-wider font-bold rounded">Under Review</span>
-                                    <span class="font-bold text-slate-900 dark:text-white">2025</span>
+                                <div>
+                                    <div class="flex justify-between items-baseline flex-wrap">
+                                        <h4 class="font-bold text-base">On well-rounded ideal lattices</h4>
+                                        <span class="text-xs font-semibold px-2.5 py-1 bg-slate-100 dark:bg-hyde-darkcard rounded text-slate-500">2018 – 2021</span>
+                                    </div>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Collaborators: Le Hoai Nam and Dr. Ha Tran.</p>
                                 </div>
-                                <a href="https://arxiv.org/abs/2508.17123" target="_blank" class="font-bold text-slate-900 dark:text-white group-hover:text-hyde-accent text-base block mb-1">
-                                    Well-Rounded Twists of the Ring of Integers in Cyclic Cubic Fields
-                                    <i class="fas fa-external-link-alt text-xs ml-1 opacity-50"></i>
-                                </a>
-                                <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                                    With <strong>Nam H. Le</strong>, <strong>David Karpuk</strong>, and <strong>Ha Tran</strong>.<br>
-                                    <em>Submitted </em>. Preprint available at arXiv:2508.17123.
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-
-                </section>
-            </div>
-
-            <!-- ========================================== -->
-            <!-- TRANG 3: ACADEMIC ACTIVITIES (MỚI)         -->
-            <!-- ========================================== -->
-            <div id="activities-view" class="hidden pt-4">
-                <section id="activities" class="mb-20">
-                    <div class="flex items-center justify-between mb-2">
-                        <p class="text-xs uppercase tracking-widest text-hyde-accent font-bold">Conferences & Travel</p>
-                        <a href="#about" class="nav-link text-xs font-semibold text-slate-500 hover:text-hyde-accent transition flex items-center">
-                            <i class="fas fa-arrow-left mr-1.5"></i> Back to Home
-                        </a>
-                    </div>
-                    <h2 class="font-slab text-3xl md:text-4xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-700">
-                        Academic Activities & Gallery
-                    </h2>
-
-                    <!-- CHIA THEO NĂM: 2026 -->
-                    <div class="mb-16">
-                        <div class="flex items-center mb-8">
-                            <h3 class="font-slab text-3xl font-bold text-hyde-accent mr-4">2026</h3>
-                            <div class="h-px bg-slate-200 dark:bg-slate-700 flex-1"></div>
-                        </div>
-                        
-                        <!-- Event 1: UNSW -->
-                        <!-- CHIA THEO NĂM: 2026 -->
-                    <div class="mb-16">
-                        <div class="flex items-center mb-8">
-                            <h3 class="font-slab text-3xl font-bold text-hyde-accent mr-4">2026</h3>
-                            <div class="h-px bg-slate-200 dark:bg-slate-700 flex-1"></div>
-                        </div>
-                        
-                        <!-- Event 1: UNSW Postgraduate Conference (1 ảnh) -->
-                        <div class="mb-10 p-6 bg-slate-50 dark:bg-hyde-darkcard rounded-xl border border-slate-200 dark:border-slate-700">
-                            <h4 class="font-slab text-xl font-bold text-slate-900 dark:text-white mb-2">
-                                <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>UNSW Postgraduate Conference
-                            </h4>
-                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-6">Sydney, Australia</p>
-                            
-                            <!-- Photos Grid (1 ảnh) -->
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="relative group overflow-hidden rounded-lg shadow-sm border border-slate-200 dark:border-slate-600">
-                                    <img src="UNSW_pgconf_1.jpg" alt="UNSW PG Conf" class="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/600x400/161b22/4fb1ba?text=UNSW_pgconf_1'">
+                                <div>
+                                    <div class="flex justify-between items-baseline flex-wrap">
+                                        <h4 class="font-bold text-base">Number Field Sieve algorithm to solve the discrete logarithm</h4>
+                                        <span class="text-xs font-semibold px-2.5 py-1 bg-slate-100 dark:bg-hyde-darkcard rounded text-slate-500">2018</span>
+                                    </div>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">Collaborators: Dr. Dung H. Duong and Dr. Thuy Pham.</p>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Event 2: Number Theory Down Under 14 (2 ảnh) -->
-                        <div class="mb-10 p-6 bg-slate-50 dark:bg-hyde-darkcard rounded-xl border border-slate-200 dark:border-slate-700">
-                            <h4 class="font-slab text-xl font-bold text-slate-900 dark:text-white mb-2">
-                                <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>Number Theory Down Under 14
-                            </h4>
-                            <p class="text-sm text-slate-600 dark:text-slate-400 mb-6">Australia</p>
-                            
-                            <!-- Photos Grid (2 ảnh) -->
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="relative group overflow-hidden rounded-lg shadow-sm border border-slate-200 dark:border-slate-600">
-                                    <img src="NTDU_14_1.jpg" alt="NTDU 14 - 1" class="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/600x400/161b22/4fb1ba?text=NTDU_14_1'">
-                                </div>
-                                <div class="relative group overflow-hidden rounded-lg shadow-sm border border-slate-200 dark:border-slate-600">
-                                    <img src="NTDU_14_2.jpg" alt="NTDU 14 - 2" class="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://placehold.co/600x400/161b22/4fb1ba?text=NTDU_14_2'">
-                                </div>
-                            </div>
-                        </div>
-                    </div>     
-
-                        <!-- BOOK TRANSLATION PROJECT (2019) -->
-                        <div class="mb-16">
-                        <div class="flex items-center mb-8">
-                            <h3 class="font-slab text-3xl font-bold text-hyde-accent mr-4">2019</h3>
-                            <div class="h-px bg-slate-200 dark:bg-slate-700 flex-1"></div>
-                        </div>
-
-<div class="mt-10 pt-8 border-t border-slate-200 dark:border-slate-700">
-    <h3 class="font-slab text-xl font-bold text-hyde-accent mb-4 flex items-center">
-        <i class="fas fa-book-reader mr-3"></i>Book Translation / Dự Án Dịch Thuật
-    </h3>
-
-    <div class="p-6 rounded-xl bg-slate-50 dark:bg-hyde-darkcard border border-slate-200 dark:border-slate-700 shadow-sm">
-        <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-            <div class="flex items-center gap-2.5">
-                <span class="px-2.5 py-1 bg-hyde-accent text-white text-xs font-bold rounded">2019</span>
-                <h4 class="font-slab font-bold text-lg text-slate-900 dark:text-white">
-                    Introduction to Commutative Algebra (Vietnamese Translation)
-                </h4>
-            </div>
-            <span class="text-xs font-medium text-slate-500 dark:text-slate-400 italic">
-                Authors: M. F. Atiyah &amp; I. G. Macdonald
-            </span>
-        </div>
-
-        <!-- English Description -->
-        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed mb-3">
-            <strong class="text-hyde-accent">[EN]</strong> In 2019, I translated the classic textbook <em>Introduction to Commutative Algebra</em> by M. F. Atiyah and I. G. Macdonald into Vietnamese. This is a book I deeply admire, and I hope this translation contributes a useful reference to the mathematical literature for students and learners in Vietnam.
-        </p>
-
-        <!-- Vietnamese Description -->
-        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-5 border-l-2 border-hyde-accent/50 pl-3 italic">
-            <strong class="text-hyde-accent not-italic">[VI]</strong> Năm 2019, tôi thực hiện bản dịch tiếng Việt cho cuốn sách kinh điển <em>Introduction to Commutative Algebra</em> (Nhập môn Đại số Giao hoán) của hai tác giả M. F. Atiyah và I. G. Macdonald. Đây là cuốn sách tôi vô cùng yêu thích và hy vọng bản dịch này có thể đóng góp một phần nhỏ vào kho tàng tài liệu tham khảo Toán học tại Việt Nam.
-        </p>
-
-        <!-- PDF Download / View Button -->
-        <div class="flex flex-wrap items-center gap-3">
-            <a href="Atiyah-Macdonald-VN.pdf" target="_blank" 
-               class="inline-flex items-center px-4 py-2 bg-hyde-accent hover:bg-hyde-accent/90 text-white text-xs font-bold rounded-lg shadow transition">
-                <i class="fas fa-file-pdf mr-2 text-sm"></i> View / Download PDF (Bản dịch Tiếng Việt)
-            </a>
-        </div>
-    </div>
-</div>
-                    <!-- CHIA THEO NĂM: 2027 (Khung sẵn) -->
-                    <!-- 
-                    <div class="mb-16">
-                        <div class="flex items-center mb-8">
-                            <h3 class="font-slab text-3xl font-bold text-hyde-accent mr-4">2027</h3>
-                            <div class="h-px bg-slate-200 dark:bg-slate-700 flex-1"></div>
-                        </div>
-                    </div> 
-                    -->
-                    
+                    </div>
                 </section>
-            </div>
+            </div> <!-- Kết thúc #publications-view -->
 
 
             <!-- ========================================== -->
-            <!-- TRANG 4: MY BLOG (MỚI)                     -->
+            <!-- TRANG 3: MY BLOG RIÊNG                     -->
             <!-- ========================================== -->
             <div id="blog-view" class="hidden pt-4">
                 <section id="blog" class="mb-20">
-                    <div class="flex items-center justify-between mb-2">
-                        <p class="text-xs uppercase tracking-widest text-hyde-accent font-bold">Personal Space</p>
-                        <a href="#about" class="nav-link text-xs font-semibold text-slate-500 hover:text-hyde-accent transition flex items-center">
-                            <i class="fas fa-arrow-left mr-1.5"></i> Back to Home
-                        </a>
-                    </div>
-                    <h2 class="font-slab text-3xl md:text-4xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-700">
-                        My Blog
-                    </h2>
+                    
+                    <!-- 3A. DANH SÁCH BÀI VIẾT CHIA THEO NĂM -->
+                    <div id="blog-list">
+                        <div class="flex items-center justify-between mb-2">
+                            <p class="text-xs uppercase tracking-widest text-hyde-accent font-bold">Personal Space</p>
+                            <a href="#about" class="nav-link text-xs font-semibold text-slate-500 hover:text-hyde-accent transition flex items-center">
+                                <i class="fas fa-arrow-left mr-1.5"></i> Back to Home
+                            </a>
+                        </div>
+                        <h2 class="font-slab text-3xl md:text-4xl font-bold mb-8 pb-4 border-b border-slate-200 dark:border-slate-700">
+                            My Blog
+                        </h2>
 
-                    <!-- CHIA THEO NĂM: 2026 -->
-                    <div class="mb-12">
-                        <div class="flex items-center mb-6">
-                            <h3 class="font-slab text-2xl font-bold text-hyde-accent mr-4">2026</h3>
-                            <div class="h-px bg-slate-200 dark:bg-slate-700 flex-1"></div>
-                        </div>
-                        
-                        <div class="space-y-6">
-                            <!-- Placeholder bài viết -->
-                            <article class="p-5 bg-slate-50 dark:bg-hyde-darkcard rounded-xl border border-slate-200 dark:border-slate-700 hover:border-hyde-accent transition cursor-pointer">
-                                <span class="text-xs font-semibold text-slate-500 mb-1 block">October 19, 2026</span>
-                                <h4 class="font-slab text-lg font-bold text-slate-900 dark:text-white mb-2">First steps in Sydney</h4>
-                                <p class="text-sm text-slate-600 dark:text-slate-400">
-                                    Content of the blog post will be updated here. It is a great place to share research journey, coding snippets, or daily life in Australia...
-                                </p>
-                            </article>
+                        <!-- CHIA THEO NĂM: 2026 -->
+                        <div class="mb-12">
+                            <div class="flex items-center mb-6">
+                                <h3 class="font-slab text-2xl font-bold text-hyde-accent mr-4">2026</h3>
+                                <div class="h-px bg-slate-200 dark:bg-slate-700 flex-1"></div>
+                            </div>
+                            
+                            <div class="space-y-6">
+                                <!-- BÀI VIẾT IMO 2026 & SIMON MARAIS (Bấm vào để mở trang PDF + Table of Contents) -->
+                                <article onclick="openPost('post-contest')" class="p-6 bg-slate-50 dark:bg-hyde-darkcard rounded-xl border border-slate-200 dark:border-slate-700 hover:border-hyde-accent transition cursor-pointer group">
+                                    <div class="flex flex-wrap items-center gap-2 text-xs text-slate-500 dark:text-slate-400 mb-2">
+                                        <span><i class="far fa-calendar-alt mr-1"></i> October 20, 2026</span>
+                                        <span class="px-2 py-0.5 bg-hyde-accent/15 text-hyde-accent rounded font-semibold">IMO 2026</span>
+                                        <span class="px-2 py-0.5 bg-hyde-accent/15 text-hyde-accent rounded font-semibold">Simon Marais</span>
+                                    </div>
+                                    <h4 class="font-slab text-xl font-bold text-slate-900 dark:text-white group-hover:text-hyde-accent transition mb-2">
+                                        Selected Solutions: IMO 2026 &amp; Simon Marais Mathematics Competition
+                                    </h4>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                                        Full typeset solutions for selected problems from the IMO 2026 and the Simon Marais Mathematics Competition, rendered directly with an interactive Table of Contents.
+                                    </p>
+                                    <span class="text-xs font-bold text-hyde-accent flex items-center">
+                                        View Full PDF &amp; Table of Contents <i class="fas fa-arrow-right ml-1.5 transform group-hover:translate-x-1 transition"></i>
+                                    </span>
+                                </article>
+
+                                <!-- BÀI VIẾT PLACEHOLDER CŨ -->
+                                <article class="p-5 bg-slate-50 dark:bg-hyde-darkcard rounded-xl border border-slate-200 dark:border-slate-700 hover:border-hyde-accent transition cursor-pointer">
+                                    <span class="text-xs font-semibold text-slate-500 mb-1 block">October 19, 2026</span>
+                                    <h4 class="font-slab text-lg font-bold text-slate-900 dark:text-white mb-2">First steps in Sydney</h4>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400">
+                                        Content of the blog post will be updated here. It is a great place to share research journey, coding snippets, or daily life in Australia...
+                                    </p>
+                                </article>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- 3B. CHI TIẾT BÀI VIẾT: HIỂN THỊ TẤT CẢ TRANG PDF + TABLE OF CONTENTS RIÊNG -->
+                    <div id="blog-articles">
+                        <article id="post-contest" class="blog-post hidden">
+                            
+                            <!-- Thanh điều hướng phía trên -->
+                            <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+                                <button onclick="closePost()" class="inline-flex items-center text-sm font-semibold text-hyde-accent hover:underline">
+                                    <i class="fas fa-arrow-left mr-2"></i> Back to My Blog
+                                </button>
+                                <a href="contest-solution.pdf" download class="inline-flex items-center px-3.5 py-1.5 bg-hyde-accent hover:bg-hyde-accent/90 text-white text-xs font-bold rounded-lg shadow transition">
+                                    <i class="fas fa-download mr-1.5"></i> Download contest-solution.pdf
+                                </a>
+                            </div>
+
+                            <h1 class="font-slab text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2">
+                                Selected Solutions: IMO 2026 &amp; Simon Marais Mathematics Competition
+                            </h1>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mb-6 pb-4 border-b border-slate-200 dark:border-slate-700">
+                                <i class="far fa-calendar-alt mr-1"></i> October 20, 2026 &bull; Full Document View (<span id="pdf-page-count">...</span> pages)
+                            </p>
+
+                            <!-- BỐ CỤC CHIA 2 CỘT: TABLE OF CONTENTS (TRÁI) + TẤT CẢ TRANG PDF (PHẢI) -->
+                            <div class="flex flex-col lg:flex-row gap-8 items-start">
+                                
+                                <!-- TABLE OF CONTENTS (CHỈ XUẤT HIỆN Ở TRANG NÀY) -->
+                                <aside class="w-full lg:w-64 shrink-0 lg:sticky lg:top-8 p-5 rounded-xl bg-slate-50 dark:bg-hyde-darkcard border border-slate-200 dark:border-slate-700 shadow-sm">
+                                    <h3 class="font-slab text-sm font-bold uppercase tracking-wider text-hyde-accent mb-3 flex items-center">
+                                        <i class="fas fa-list-ul mr-2"></i> Table of Contents
+                                    </h3>
+
+                                    <!-- Mục lục theo phần -->
+                                    <div class="mb-4 pb-3 border-b border-slate-200 dark:border-slate-700">
+                                        <p class="text-[11px] font-bold uppercase text-slate-400 mb-2">Sections</p>
+                                        <ul class="space-y-2 text-xs font-medium text-slate-700 dark:text-slate-300">
+                                            <li>
+                                                <button onclick="scrollToPdfPage(1)" class="text-left hover:text-hyde-accent transition flex items-center justify-between w-full">
+                                                    <span>1. IMO 2026 Problems</span>
+                                                    <span class="text-[10px] px-1.5 py-0.5 bg-slate-200 dark:bg-slate-700 rounded">p. 1</span>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button onclick="scrollToPdfPage(2)" class="text-left hover:text-hyde-accent transition flex items-center justify-between w-full">
+                                                    <span>2. Simon Marais Problems</span>
+                                                    <span class="text-[10px] px-1.5 py-0.5 bg-slate-200 dark:bg-slate-700 rounded">p. 2</span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Mục lục tự động nhảy đến từng trang của file PDF -->
+                                    <div>
+                                        <p class="text-[11px] font-bold uppercase text-slate-400 mb-2">All Pages</p>
+                                        <div id="pdf-toc-list" class="grid grid-cols-4 gap-1.5 max-h-60 overflow-y-auto pr-1">
+                                            <!-- Các nút P.1, P.2, P.3... sẽ tự động được tạo ở đây -->
+                                        </div>
+                                    </div>
+                                </aside>
+
+                                <!-- NƠI HIỂN THỊ TẤT CẢ CÁC TRANG CỦA FILE contest-solution.pdf -->
+                                <div class="flex-1 w-full">
+                                    <div id="pdf-loading" class="p-8 text-center text-sm text-slate-500 bg-slate-50 dark:bg-hyde-darkcard rounded-xl border border-slate-200 dark:border-slate-700">
+                                        <i class="fas fa-spinner fa-spin text-hyde-accent text-xl mb-2 block"></i>
+                                        Loading all pages from <strong>contest-solution.pdf</strong>...
+                                    </div>
+                                    
+                                    <!-- Từng trang PDF sẽ tự động nối tiếp nhau bên trong thẻ này -->
+                                    <div id="pdf-pages-container" class="space-y-6"></div>
+                                </div>
+
+                            </div>
+                        </article>
+                    </div>
+
                 </section>
-            </div>
+            </div> <!-- Kết thúc #blog-view -->
 
         </main>
     </div>
 
-    <!-- JAVASCRIPT: ĐỒNG HỒ, LƯỢT TRUY CẬP VÀ ĐIỀU HƯỚNG TRANG -->
+    <!-- THƯ VIỆN PDF.JS VÀ JAVASCRIPT ĐIỀU HƯỚNG TOÀN TRANG -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            
-            // 1. CHỨC NĂNG ĐỒNG HỒ AUSTRALIA/SYDNEY
-            function updateSydneyTime() {
-                const timeElement = document.getElementById('sydney-time');
-                if (timeElement) {
-                    const now = new Date();
-                    // Format giờ theo múi giờ Úc
-                    const options = { 
-                        timeZone: 'Australia/Sydney', 
-                        weekday: 'short', 
-                        year: 'numeric', 
-                        month: 'short', 
-                        day: 'numeric', 
-                        hour: '2-digit', 
-                        minute: '2-digit', 
-                        second: '2-digit', 
-                        hour12: true 
-                    };
-                    const formattedTime = new Intl.DateTimeFormat('en-AU', options).format(now);
-                    timeElement.textContent = formattedTime;
-                }
-            }
-            setInterval(updateSydneyTime, 1000);
-            updateSydneyTime(); // Khởi chạy ngay
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+        let pdfRendered = false;
 
-            // 2. CHỨC NĂNG VIEW SWITCHER (ĐIỀU HƯỚNG TRANG)
-            const views = {
-                'main': document.getElementById("main-view"),
-                'publications': document.getElementById("publications-view"),
-                'activities': document.getElementById("activities-view"),
-                'blog': document.getElementById("blog-view")
-            };
+        // Mở bài viết trong Blog và tự động vẽ tất cả các trang PDF
+        function openPost(postId) {
+            document.getElementById("blog-list").classList.add("hidden");
+            document.querySelectorAll(".blog-post").forEach(post => post.classList.add("hidden"));
+            
+            const targetPost = document.getElementById(postId);
+            if (targetPost) {
+                targetPost.classList.remove("hidden");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+
+            if (postId === 'post-contest' && !pdfRendered) {
+                renderAllPdfPages('contest-solution.pdf');
+            }
+        }
+
+        // Quay lại danh sách bài viết My Blog
+        function closePost() {
+            document.querySelectorAll(".blog-post").forEach(post => post.classList.add("hidden"));
+            document.getElementById("blog-list").classList.remove("hidden");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        // Cuộn mượt tới đúng trang PDF khi bấm vào Table of Contents
+        function scrollToPdfPage(pageNumber) {
+            const pageEl = document.getElementById('pdf-page-' + pageNumber);
+            if (pageEl) {
+                pageEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Đọc file contest-solution.pdf và hiển thị toàn bộ các trang lên màn hình
+        async function renderAllPdfPages(url) {
+            const container = document.getElementById('pdf-pages-container');
+            const tocList = document.getElementById('pdf-toc-list');
+            const loadingBox = document.getElementById('pdf-loading');
+            const pageCountSpan = document.getElementById('pdf-page-count');
+
+            try {
+                const pdf = await pdfjsLib.getDocument(url).promise;
+                pdfRendered = true;
+                loadingBox.classList.add('hidden');
+                pageCountSpan.textContent = pdf.numPages;
+
+                for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+                    // 1. Tạo nút chọn trang nhanh trong Table of Contents
+                    const pageBtn = document.createElement('button');
+                    pageBtn.textContent = 'P.' + pageNum;
+                    pageBtn.className = 'px-2 py-1 text-xs font-semibold rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-hyde-accent hover:text-hyde-accent transition';
+                    pageBtn.onclick = () => scrollToPdfPage(pageNum);
+                    tocList.appendChild(pageBtn);
+
+                    // 2. Tạo khung chứa từng trang PDF
+                    const pageWrapper = document.createElement('div');
+                    pageWrapper.id = 'pdf-page-' + pageNum;
+                    pageWrapper.className = 'p-2 sm:p-4 bg-white dark:bg-hyde-darkcard rounded-xl border border-slate-200 dark:border-slate-700 shadow-md';
+
+                    const pageLabel = document.createElement('div');
+                    pageLabel.className = 'text-right text-[11px] font-semibold text-slate-400 mb-2';
+                    pageLabel.textContent = `Page ${pageNum} of ${pdf.numPages}`;
+
+                    const canvas = document.createElement('canvas');
+                    canvas.className = 'w-full h-auto rounded';
+                    pageWrapper.appendChild(pageLabel);
+                    pageWrapper.appendChild(canvas);
+                    container.appendChild(pageWrapper);
+
+                    // 3. Render trang PDF với độ nét cao (Scale = 2.0)
+                    const page = await pdf.getPage(pageNum);
+                    const viewport = page.getViewport({ scale: 2.0 });
+                    const context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    await page.render({ canvasContext: context, viewport: viewport }).promise;
+                }
+            } catch (error) {
+                loadingBox.innerHTML = `<span class="text-red-500 font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>Không tìm thấy hoặc không thể tải file <strong>contest-solution.pdf</strong>. Hãy đảm bảo bạn đã upload file <strong>contest-solution.pdf</strong> lên cùng thư mục với file index.html trên GitHub!</span>`;
+            }
+        }
+
+        // Điều hướng giữa Trang chính, Publications và My Blog
+        document.addEventListener("DOMContentLoaded", function () {
+            const mainView = document.getElementById("main-view");
+            const pubView = document.getElementById("publications-view");
+            const blogView = document.getElementById("blog-view");
             const navLinks = document.querySelectorAll(".nav-link");
             const menuLinks = document.querySelectorAll("aside nav a");
 
             function switchView(targetHash) {
-                // Đặt các hash thuộc trang chính (main-view)
-                const mainSections = ['#about', '#education', '#seminars', '#skills'];
-                
-                // Xác định trang nào cần hiện
-                let targetView = 'main';
-                if (targetHash === '#publications') targetView = 'publications';
-                else if (targetHash === '#activities') targetView = 'activities';
-                else if (targetHash === '#blog') targetView = 'blog';
-
-                // Ẩn tất cả các trang, chỉ hiện trang mục tiêu
-                Object.keys(views).forEach(key => {
-                    if(views[key]) {
-                        if (key === targetView) {
-                            views[key].classList.remove('hidden');
-                        } else {
-                            views[key].classList.add('hidden');
-                        }
-                    }
-                });
-
-                // Xử lý Active state (in đậm, đổi màu) trên menu trái
                 menuLinks.forEach(item => {
-                    const linkHash = item.getAttribute("href");
-                    if (linkHash === targetHash || (targetView === 'main' && mainSections.includes(targetHash) && linkHash === targetHash)) {
+                    if (item.getAttribute("href") === targetHash) {
                         item.classList.add("text-hyde-accent", "font-bold", "border-hyde-accent");
                         item.classList.remove("border-white/10");
                     } else {
@@ -729,20 +750,28 @@ Well-Rounded Twists of Ideal Lattices from Imaginary Quadratic Fields
                     }
                 });
 
-                // Cuộn mượt mà
-                if (targetView === 'main' && targetHash) {
+                mainView.classList.add("hidden");
+                pubView.classList.add("hidden");
+                blogView.classList.add("hidden");
+
+                if (targetHash === "#publications") {
+                    pubView.classList.remove("hidden");
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                } else if (targetHash === "#blog") {
+                    blogView.classList.remove("hidden");
+                    closePost();
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                } else {
+                    mainView.classList.remove("hidden");
                     const targetElement = document.querySelector(targetHash);
                     if (targetElement) {
-                        setTimeout(() => targetElement.scrollIntoView({ behavior: "smooth" }), 50);
-                    } else {
-                        window.scrollTo({ top: 0, behavior: "smooth" });
+                        setTimeout(() => {
+                            targetElement.scrollIntoView({ behavior: "smooth" });
+                        }, 50);
                     }
-                } else {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
                 }
             }
 
-            // Lắng nghe Click
             navLinks.forEach(link => {
                 link.addEventListener("click", function (e) {
                     const targetHash = this.getAttribute("href");
@@ -754,14 +783,15 @@ Well-Rounded Twists of Ideal Lattices from Imaginary Quadratic Fields
                 });
             });
 
-            // Xử lý khi bấm nút Back/Forward trên trình duyệt
             window.addEventListener("popstate", () => {
                 switchView(window.location.hash || "#about");
             });
 
-            // Kiểm tra URL lúc mới vào trang
-            switchView(window.location.hash || "#about");
+            if (window.location.hash === "#publications" || window.location.hash === "#blog") {
+                switchView(window.location.hash);
+            }
         });
     </script>
+
 </body>
 </html>
